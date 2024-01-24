@@ -1,6 +1,11 @@
-{inputs, pkgs, ...}: {
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
+_ : {
+    home.file.".config/hypr" = {
+        source = ./config/hypr;
+        recursive = true;
+    };
+    home.sessionVariables = {
+        GTK_IM_MODULE = "fcitx5";
+        QT_IM_MODULE = "fcitx5";
+        XMODIFIERS = "@im=fcitx5";
+    };
 }

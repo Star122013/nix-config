@@ -1,6 +1,6 @@
-_:{
+_ :{
     imports = [
         ./hyprland
-        ./fonts
+        ./kde
     ];
 }
